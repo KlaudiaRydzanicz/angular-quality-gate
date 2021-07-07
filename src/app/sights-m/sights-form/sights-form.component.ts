@@ -6,7 +6,6 @@ import {SightsListComponent} from '../../sights-list/sights-list.component';
 import {ActivatedRoute} from '@angular/router';
 
 
-
 @Component({
   selector: 'app-sights-form',
   templateUrl: './sights-form.component.html',
@@ -44,15 +43,16 @@ export class SightsFormComponent implements OnInit {
   ngOnInit(): void {
     if (this.id) {
       this.sightsService.getSight(this.id).subscribe((data: SightseeingPoint) => {
-
-        this.form.patchValue({
+        this.sight = {
+          id: this.id,
           name: data.name,
           longitude: data.longitude,
           latitude: data.latitude,
-          country: data.country.name,
+          country: data.country.name ,
           description: data.description,
           color: data.color
-        });
+        };
+        this.form.patchValue(this.sight);
       });
     }
     return this.form.value;
@@ -66,6 +66,7 @@ export class SightsFormComponent implements OnInit {
       });
       return;
     }
+    console.log('dodawanie');
     const newValue = this.form.value;
     newValue.id = '_' + Math.random().toString(36).substr(2, 9);
     this.sightsService.addNewSight(newValue).subscribe(() => {

@@ -55,22 +55,49 @@
       "id": "_2otz12ko3"
     },
     {
-      "name": "test",
-      "longitude": 12.1234,
-      "latitude": 22.2345,
-      "country": "POLAND",
-      "description": "test",
-      "color": "2",
-      "id": "_mp82hious"
-    },
-    {
-      "name": "Wawel1",
+      "name": "Wawel-klaudusia",
       "longitude": 19.93535,
       "latitude": 50.05414,
       "country": "POLAND",
       "description": "The Wawel Royal Castle and the",
       "color": 1,
-      "id": "_oxgbiobyg"
+      "id": "_fnu7sacm2"
+    },
+    {
+      "name": "Wawel",
+      "longitude": 19.93535,
+      "latitude": 50.05414,
+      "country": "POLAND",
+      "description": "The Wawel Royal Castle and the",
+      "color": 1,
+      "id": "_hcjobow6t"
+    },
+    {
+      "name": "Dragon 2",
+      "longitude": 19.9336,
+      "latitude": 50.05305,
+      "country": "POLAND",
+      "description": "Dragon of Wawel Hill, is a famous dragon in Polish folklore. His lair was in a cave ",
+      "color": 2,
+      "id": "_y6drfx6hw"
+    },
+    {
+      "name": "Drago1223",
+      "longitude": 19.9336,
+      "latitude": 50.05305,
+      "country": "POLAND",
+      "description": "Dragon of Wawel Hill, is a famous dragon in Polish folklore. His lair was in a cave ",
+      "color": 2,
+      "id": "_u9f76bqxt"
+    },
+    {
+      "name": "e2",
+      "longitude": 19.9336,
+      "latitude": 50.05305,
+      "country": "POLAND",
+      "description": "Dragon of Wawel Hill, is a famous dragon in Polish folklore. His lair was in a cave ",
+      "color": 2,
+      "id": "_4sbxriu0b"
     }
   ]
 }
