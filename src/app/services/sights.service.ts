@@ -22,24 +22,24 @@ export class SightsService {
       map(result => result),
       map(sights => {
         return sights.map(sight => {
-          const country = new Country();
-          country.name = sight.country.name;
-          country.iata_code = sight.country.iata_code;
+          const country = new Country('Poland', 'PL');
+          // country.name = sight.country.name;
+          // country.iata_code = sight.country.iata_code;
 
           return new SightseeingPoint(
             sight.id,
             sight.name,
             sight.longitude,
             sight.latitude,
-            sight.country.name,
+            country,
             sight.description,
             sight.color
           );
         });
       }),
-      // map(sights => {
-      //   return sights.filter(sight => sight.color);
-      // })
+      map(sights => {
+        return sights.filter(sight => sight.color);
+      })
     );
   }
   getSight(id: string): Observable<SightseeingPoint> {

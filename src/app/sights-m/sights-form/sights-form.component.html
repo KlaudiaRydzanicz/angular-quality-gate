@@ -11,19 +11,25 @@
     </label>
 
 
-      <div *ngIf="errorMessage('location', 'required')" class="alert alert-danger">
-        Coordinates is required.
-      </div>
-      <div id="LocationError" *ngIf="errorMessage('location', 'pattern')" class="alert alert-danger">
-        The coordinates format is incorrect
-      </div>
-
+    <div *ngIf="errorMessage('location', 'required')" class="alert alert-danger">
+      Coordinates is required.
+    </div>
+    <div id="LongitudeError" *ngIf="errorMessage('longitude', 'pattern')" class="alert alert-danger">
+      The coordinates format is incorrect
+    </div>
 
 
     <label>
       Latitude
       <input type="number" formControlName="latitude" class="form-control" id="latitude">
     </label>
+    <div *ngIf="errorMessage('latitude', 'required')" class="alert alert-danger">
+      Coordinates is required.
+    </div>
+    <div id="LatitudeError" *ngIf="errorMessage('latitude', 'pattern')" class="alert alert-danger">
+      The coordinates format is incorrect
+    </div>
+
     <label>
       Country
       <input type="text" formControlName="country" class="form-control" id="country">
@@ -34,11 +40,11 @@
       <input type="text" class="form-control" formControlName="description" id="description">
     </label>
 
-    <div *ngIf="errorMessage('url', 'required')" class="alert alert-danger">
-      URL is required.
+    <div *ngIf="errorMessage('description', 'required')" class="alert alert-danger">
+      Description is required.
     </div>
-    <div id="urlError" *ngIf="errorMessage('url', 'pattern')" class="alert alert-danger">
-      The URL format is incorrect
+    <div id="DescriptionError" *ngIf="errorMessage('description', 'maxlength')" class="alert alert-danger">
+      text is too long!
     </div>
 
     <label>

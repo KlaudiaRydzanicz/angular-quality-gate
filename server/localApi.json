@@ -98,6 +98,105 @@
       "description": "Dragon of Wawel Hill, is a famous dragon in Polish folklore. His lair was in a cave ",
       "color": 2,
       "id": "_4sbxriu0b"
+    },
+    {
+      "name": "Krakow",
+      "longitude": 21.0122,
+      "latitude": 13.23456,
+      "country": "Poland",
+      "description": "test",
+      "color": "1",
+      "id": "_2bns3b8uw"
+    },
+    {
+      "name": "Krakow",
+      "longitude": 21.0122,
+      "latitude": 13.23456,
+      "country": "Poland",
+      "description": "test",
+      "color": "1",
+      "id": "_cx9610d04"
+    },
+    {
+      "name": "Klaudia wkurzona",
+      "longitude": 23.4567,
+      "latitude": 34.6578,
+      "country": "POLAND",
+      "description": "test",
+      "color": "1",
+      "id": "_ztsu9pic0"
+    },
+    {
+      "name": "Krakow",
+      "longitude": 21.0122,
+      "latitude": 13.23456,
+      "country": "Poland",
+      "description": "test",
+      "color": "1",
+      "id": "_io8cov7rd"
+    },
+    {
+      "name": "Krakow",
+      "longitude": 21.0122,
+      "latitude": 13.23456,
+      "country": "Poland",
+      "description": "test",
+      "color": "1",
+      "id": "_8bpt0e4qq"
+    },
+    {
+      "name": "Krakow",
+      "longitude": 21.0122,
+      "latitude": 13.23456,
+      "country": "Poland",
+      "description": "test",
+      "color": "1",
+      "id": "_12asf8sxo"
+    },
+    {
+      "name": "Krakow",
+      "longitude": 21.0122,
+      "latitude": 13.23456,
+      "country": "Poland",
+      "description": "test",
+      "color": "1",
+      "id": "_6rera67no"
+    },
+    {
+      "name": "Krakow",
+      "longitude": 21.0122,
+      "latitude": 13.23456,
+      "country": "Poland",
+      "description": "test",
+      "color": "1",
+      "id": "_8br82cadv"
+    },
+    {
+      "name": "Krakow",
+      "longitude": 21.0122,
+      "latitude": 13.23456,
+      "country": "Poland",
+      "description": "test",
+      "color": "1",
+      "id": "_xx3x7de5e"
+    },
+    {
+      "name": "Krakow",
+      "longitude": 21.0122,
+      "latitude": 13.23456,
+      "countryName": "Poland",
+      "description": "test",
+      "color": "1",
+      "id": "_jc8fagpts"
+    },
+    {
+      "name": "Krakow",
+      "longitude": 21.0122,
+      "latitude": 13.23456,
+      "country": "Poland",
+      "description": "test",
+      "color": "1",
+      "id": "_8scnvszv5"
     }
   ]
 }

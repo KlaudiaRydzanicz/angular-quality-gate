@@ -43,16 +43,7 @@ export class SightsFormComponent implements OnInit {
   ngOnInit(): void {
     if (this.id) {
       this.sightsService.getSight(this.id).subscribe((data: SightseeingPoint) => {
-        this.sight = {
-          id: this.id,
-          name: data.name,
-          longitude: data.longitude,
-          latitude: data.latitude,
-          country: data.country.name ,
-          description: data.description,
-          color: data.color
-        };
-        this.form.patchValue(this.sight);
+        this.form.patchValue(data);
       });
     }
     return this.form.value;

@@ -5,6 +5,8 @@ import {Router} from '@angular/router';
 import {SightsService} from '../services/sights.service';
 import {MapComponent} from '../map/map.component';
 import {Location} from '../models/location';
+import {SightsDetailComponent} from "../sights-m/sights-detail/sights-detail.component";
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-sights',
@@ -19,7 +21,8 @@ export class SightsComponent implements OnInit {
 
   constructor(
     private sightsService: SightsService,
-    private router: Router
+    private router: Router,
+    private modalService: NgbModal
   ) {
   }
 
@@ -34,6 +37,7 @@ export class SightsComponent implements OnInit {
 
   selectSight(sight: SightseeingPoint): void {
     this.sightsService.selectedSight = sight;
-    this.router.navigate(['/sight']).then();
+    const modalRef = this.modalService.open(SightsDetailComponent, {ariaLabelledBy: 'modal-basic-title'});
+    modalRef.componentInstance.currentSight = sight;
   }
 }

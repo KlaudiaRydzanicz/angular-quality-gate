@@ -6,35 +6,39 @@ describe("Test adding object", () => {
 
   it('should add object', () => {
     cy.get('#name').type('Krakow');
-    cy.get('#longitude').type('21.0122, 13.23456');
-    cy.get('#latitude').type('Kraków test');
-    cy.get('#country').type('https://en.wikipedia.org/wiki/');
-    cy.get('#description').click();
-    cy.get('#success').contains('You submitted new City successfully!');
+    cy.get('#longitude').type('21.0122');
+    cy.get('#latitude').type('13.23456');
+    cy.get('#country').type('Poland');
+    cy.get('#description').type('test');
+    cy.get('#color').select('#FF5733');
+    cy.get('#update').click();
+    cy.get('#success').contains('You add new sight!');
     cy.wait(3000);
 
   });
 
 
-
-  it('should test url', () => {
+  it('should test coordinates', () => {
 
     cy.get('#name').type('Krakow');
-    cy.get('#location').type('21.0122, 13.23456');
-    cy.get('#url').type('https://test.wikipedia.org/wiki/test');
-    cy.get('#description').type('Kraków test');
-    cy.get('div#urlError').contains('The URL format is incorrect');
-
-    cy.wait(3000);
+    cy.get('#longitude').type('21.0122');
+    cy.get('#latitude').type('13.23456456');
+    cy.get('#country').type('Poland');
+    cy.get('#description').type('test');
+    cy.get('#color').select('#FF5733');
+    cy.contains('The coordinates format is incorrect');
   })
 
 
-  it('should test locationt', () => {
+  it('should test description', () => {
 
     cy.get('#name').type('Krakow');
-    cy.get('#location').type('a21,4566, 23,7890');
-    cy.get('#description').type('Kraków test');
-    cy.contains('The coordinates format is incorrect');
-    cy.wait(3000);
+    cy.get('#longitude').type('21.0122');
+    cy.get('#latitude').type('13.234');
+    cy.get('#country').type('Poland');
+    cy.get('#description').type('KR'.repeat(150));
+    cy.get('#color').select('#FF5733');
+    cy.contains('text is too long');
   })
 });
+
