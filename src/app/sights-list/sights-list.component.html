@@ -2,7 +2,17 @@
 
   <div class="sight-element" *ngFor="let sight of sights">
     <h4>{{sight.name}}</h4>
-      <sub>{{sight.longitude}} {{sight.latitude}}</sub>
-      <div class="highlight" [style.background-color]="sight.color"></div>
+    <sub>{{sight.longitude}} {{sight.latitude}}</sub>
+    <div class="btn-group">
+      <button class="btn btn-outline-success" type="button" (click)="open(sight)">
+        Detail
+      </button>
+            <button class="btn btn-outline-info" (click)="editObject(sight)">
+              Edit
+            </button>
+      <div class="highlight" [style.background-color]="sight.getColor()"></div>
+    </div>
+
   </div>
+  <button class="btn btn-outline-success " (click)="newObject()">Add new</button>
 </div>

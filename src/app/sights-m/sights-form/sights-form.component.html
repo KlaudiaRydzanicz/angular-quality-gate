@@ -1,0 +1,61 @@
+<div *ngIf="!submitted">
+  <form *ngIf="form" [formGroup]="form" class="d-flex flex-column" (ngSubmit)="upDate()">
+    <label>
+      Name
+      <input type="text" formControlName="name" class="form-control" id="name">
+    </label>
+
+    <label>
+      Longitude:
+      <input type="number" formControlName="longitude" class="form-control" id="longitude">
+    </label>
+
+
+      <div *ngIf="errorMessage('location', 'required')" class="alert alert-danger">
+        Coordinates is required.
+      </div>
+      <div id="LocationError" *ngIf="errorMessage('location', 'pattern')" class="alert alert-danger">
+        The coordinates format is incorrect
+      </div>
+
+
+
+    <label>
+      Latitude
+      <input type="number" formControlName="latitude" class="form-control" id="latitude">
+    </label>
+    <label>
+      Country
+      <input type="text" formControlName="country" class="form-control" id="country">
+    </label>
+
+    <label>
+      Description
+      <input type="text" class="form-control" formControlName="description" id="description">
+    </label>
+
+<!--    <div *ngIf="errorMessage('url', 'required')" class="alert alert-danger">-->
+<!--      URL is required.-->
+<!--    </div>-->
+<!--    <div id="urlError" *ngIf="errorMessage('url', 'pattern')" class="alert alert-danger">-->
+<!--      The URL format is incorrect-->
+<!--    </div>-->
+
+    <label>
+      Colour
+      <select formControlName="color" class="form-select" aria-label="Default select example" id="color">
+        <ng-container *ngFor=" let color of colors ; let index =index">
+          <option [value]="color[0]">{{color[1]}}</option>
+        </ng-container>
+      </select>
+    </label>
+
+    <div class="d-flex justify-content-between mt-2">
+      <button type="submit" class="btn btn-outline-primary" [disabled]="form.invalid" id="update">Update</button>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="submitted">
+  <h4 id="success">{{message}}</h4>
+</div>
