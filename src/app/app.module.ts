@@ -10,10 +10,7 @@ import {NgxMapboxGLModule} from 'ngx-mapbox-gl';
 import {environment} from '../environments/environment';
 import { SightsComponent } from './sights/sights.component';
 import { NavComponent } from './nav/nav.component';
-import {MatTabsModule} from '@angular/material/tabs';
 import { SightsListComponent } from './sights-list/sights-list.component';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -21,6 +18,7 @@ import {MatCardModule} from '@angular/material/card';
     MapComponent,
     SightsComponent,
     NavComponent,
+    SightsListComponent
   ],
   imports: [
     BrowserModule,
@@ -29,9 +27,7 @@ import {MatCardModule} from '@angular/material/card';
       accessToken: environment.mapboxToken
     }),
     ReactiveFormsModule,
-    MatTabsModule,
-    MatButtonModule,
-    MatCardModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
